@@ -1,5 +1,5 @@
 ## Building Your Own Docker Images
-##### <span style="font-family:Helvetica Neue; font-weight:bold">A <span style="color:#e49436">Git</span>NovaLUG</span>
+##### <span style="font-family:Helvetica Neue; font-weight:bold">A <span style="color:#e49436">NovaLUG, 13-May-2017</span>
 
 ---
 
