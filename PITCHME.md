@@ -19,6 +19,8 @@ This is a continuation of my previous NovaLUG presentation on
 
 Docker can be used to create customized images that match your needs or distribute your code to other users.
 
+If Docker is installed on your machine you can try this in real time.
+
 ---
 ## What is Docker?
 
@@ -55,10 +57,13 @@ FROM something
 RUN something
 
 ```
+
+---
+
 ## Dockerize an application
 
 +++
-exiting code
+existing code
 
 ```
 something goes here
