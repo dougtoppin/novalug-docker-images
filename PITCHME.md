@@ -55,6 +55,18 @@ FROM something
 RUN something
 
 ```
+## Dockerize an application
+
++++
+exiting code
+
+```
+something goes here
+something else goes here
+```
+
++++
+dockerize it like this
 
 ---
 ## links
