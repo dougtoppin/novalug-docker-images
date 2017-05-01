@@ -2,6 +2,7 @@
 ##### <span style="font-family:Helvetica Neue; font-weight:bold"><span style="color:#e49436">NovaLUG, 13-May-2017</span>
 <span style="color:#e49436">dougtoppin@gmail.com</span>
 
+View this using [GitPitch](https://gitpitch.com/dougtoppin/novalug-docker-images)
 ---
 
 ## Agenda
