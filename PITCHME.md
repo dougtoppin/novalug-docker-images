@@ -15,7 +15,7 @@ View this using [GitPitch](https://gitpitch.com/dougtoppin/novalug-docker-images
 
 ## Overview
 
-This is a continuation of my previous NovaLUG presentation on 
+This is a continuation of my previous NovaLUG presentation on
 [Docker For Everyone](https://github.com/dougtoppin/presentations/blob/master/novalug-dockerforeveryone.pdf)
 
 Docker can be used to create customized images that match your needs or distribute your code to other users.
@@ -51,14 +51,25 @@ Dockerfiles
 
 +++
 
-example of a dockerfile
+example of a Dockerfile
 
 ```
-FROM something
+FROM alpine
 RUN something
 
 ```
 
++++ Creating images
+
+Build using a tag
+
+`docker build -t myalpine:latest .`
+
++++ Running images
+
+Run using a tag
+
+`docker run -it --rm myalpine`
 ---
 
 ## Dockerize an application
@@ -77,7 +88,6 @@ dockerize it like this
 ---
 ## links
 
-* link 1
-* link 2
-* link 3
-
+* [Docker For Everyone](https://github.com/dougtoppin/presentations/blob/master/novalug-dockerforeveryone.pdf)
+* [https://www.docker.com/](https://www.docker.com/)
+* [https://hub.docker.com/](https://hub.docker.com/)
