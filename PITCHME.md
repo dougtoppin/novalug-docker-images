@@ -9,6 +9,7 @@ View this using [GitPitch](https://gitpitch.com/dougtoppin/novalug-docker-images
 
 * Overview
 * What is Docker?
+* Commands you need to use
 * What are Docker images?
 * Where can I find and store images?
 
@@ -23,14 +24,20 @@ Docker can be used to create customized images that match your needs or to distr
 
 If Docker is installed on your machine you can try this in real time
 
-Install ready-to-go docker cli and engine from here
+I am running Version 17.05.0-ce-mac9
+
++++
+
+Install ready-to-go from here
 
 [https://store.docker.com/search?type=edition&offering=community](https://store.docker.com/search?type=edition&offering=community)
 
-To build your own docker cli try [https://github.com/moby/moby](https://github.com/moby/moby)
++++
 
+To build your own docker try this
 
-I am running Version 17.05.0-ce-mac9
+[https://github.com/moby/moby](https://github.com/moby/moby)
+
 
 ---
 ## What is Docker?
@@ -54,20 +61,47 @@ The bigger picture
 
 ---
 
-Commands you need to use
+## Commands you need to use
+
+
++++
+
+Tell me something
 
 * docker help - more than 50 subcommands
-* docker version - who am i?
+* docker version - who am i
 * docker info - describe my environment
+
++++
+
+Run stuff
+
+* docker run - run something
 * docker ps - what is running or has run
+* docker exec - jump into something already running
+
++++
+
+Images
+
 * docker images - what is in my image cache
 * docker build - make me something
-* docker run - run something
-* docker logs - output from something running/that ran
-* docker inspect - look at something
-* docker exec - jump into something already running
 * docker push - save my image somewhere
-* docker prune - clean up stuff
+
++++
+
+Looking around a little
+
+* docker logs - output from something running or that ran
+* docker inspect - look at something
+
++++
+
+Maintenance
+
+* docker rm - remove containers
+* docker rmi - remove images
+* docker prune - clean up on a grander scale
 
 
 
@@ -132,6 +166,16 @@ store.docker.com (aka dockerhub)
 
 +++
 my own repository
+
++++
+AWS ECR
+
++++
+files using export and import using archives
+
+* docker image save
+* docker image import
+* docker container commit
 
 
 ---
