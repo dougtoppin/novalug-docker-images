@@ -132,13 +132,17 @@ RUN something
 
 ```
 
-+++ Creating images
++++
+
+Creating images
 
 Build using a tag
 
 `docker build -t myalpine:latest .`
 
-+++ Running images
++++
+
+Running images
 
 Run using a tag
 
