@@ -34,7 +34,7 @@ Install ready-to-go from here
 
 +++
 
-To build your own docker try this
+To build your own docker try this from the Moby project [https://mobyproject.org/](https://mobyproject.org/) (evolving, YMMV)
 
 [https://github.com/moby/moby](https://github.com/moby/moby)
 
