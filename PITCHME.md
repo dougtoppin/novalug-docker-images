@@ -136,17 +136,37 @@ RUN something
 
 Creating images
 
-Build using a tag
+There are several ways to create images
 
-`docker build -t myalpine:latest .`
+* build using a Dockerfile
+* commit a running container
 
 +++
 
+Build an image with a tag using a Dockerfile
+
+`docker build -t myalpine:latest .`
+
+Using a tag helps because you can use that name to refer to it later
+
++++
 Running images
 
 Run using a tag
 
 `docker run -it --rm myalpine`
++++
+
+Commit a container (customized to your needs) to an image
+
+```
+docker run -it --rm --name=test1 alpine sh
+docker container commit test1 dougtoppin/test1
+```
+
++++
+
+
 ---
 
 ## Dockerize an application
