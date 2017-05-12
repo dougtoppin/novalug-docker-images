@@ -1,4 +1,4 @@
-## Building Your Own Docker Images
+## Building Your Own docker Images
 ##### <span style="font-family:Helvetica Neue; font-weight:bold"><span style="color:#e49436">NovaLUG, 13-May-2017</span>
 <span style="color:#e49436">dougtoppin@gmail.com</span>
 
@@ -7,9 +7,9 @@
 ## Agenda
 
 * Overview
-* What is Docker?
+* What is docker?
 * Commands you need to use
-* What are Docker images?
+* What are docker images?
 * Where can I find and store images?
 * Links
 
@@ -18,11 +18,11 @@
 ## Overview
 
 This is a continuation of my previous NovaLUG presentation on
-[Docker For Everyone](https://github.com/dougtoppin/presentations/blob/master/novalug-dockerforeveryone.pdf)
+[docker For Everyone](https://github.com/dougtoppin/presentations/blob/master/novalug-dockerforeveryone.pdf)
 
-Docker can be used to create customized images that match your needs or to distribute your application to others
+docker can be used to create customized images that match your needs or to distribute your application to others
 
-If Docker is installed on your machine you can try this in real time
+If docker is installed on your machine you can try this in real time
 
 I am running Version 17.05.0-ce-mac9
 
@@ -43,17 +43,11 @@ To build your own docker try this from the Moby project [https://mobyproject.org
 
 
 ---
-## What is Docker?
+## What is docker?
 
 +++
-
-Docker is tbd
 
 "sandbox applications on a secure Linux environment"
-
-+++
-
-a little more tbd
 
 ---
 The bigger picture
@@ -113,7 +107,7 @@ Maintenance
 ---
 
 
-## What are Docker images?
+## What are docker images?
 
 +++
 
@@ -183,7 +177,7 @@ docker container commit test1 dougtoppin/test1
 
 ---
 
-## Dockerize an application
+## dockerize an application
 
 +++
 existing code
@@ -211,36 +205,52 @@ store.docker.com
 
 +++
 
-### RH container catalog
+### Red Hat container catalog
+
+"The <a href="https://access.redhat.com/containers" target="_blank">Red Hat container catalog</a> acts as a single location for finding, acquiring, and learning about all official Red Hat containers.
+In time, this will expand to containers from Red Hat certified Independent Software Vendors (ISVs) as well."
 
 +++
 
 ### AWS ECR
+<a href="https://aws.amazon.com/ecr/" target="_blank">Amazon EC2 Container Registry (ECR) </a> is a fully-managed Docker container registry...hosts your images in a highly available and scalable architecture, allowing you to reliably deploy containers for your applications.
+
 +++
 
 ### DTR
 
+<a href="https://docs.docker.com/datacenter/dtr/2.1/guides/" target="_blank">Docker Trusted Registry (DTR) </a>  "is the enterprise-grade image storage solution from Docker. You install it behind your firewall so that you can securely store and manage the Docker images you use in your applications."
 
 +++
 ### files using export and import using archives
+
+Instead of using a registry you can work at the file level if so desired.
 
 * docker image save
 * docker image import
 * docker container commit
 
 +++
-push an image somewhere
+Store an image into a registry
+
+Once you have authenticated with a respository you can store an image into it using the `docker push ...` command.
+
+* docker login registry_url
+* docker tag repository:image:version
+* docker push repository:image:version
++++
+image layers, vulnerabilities and scanning
+
+Because images are composed of layers containing executable files those files may contain vulnerabilities due to either bugs or malicious code.
+It is important to ensure that the images and layers comprising them in your repositories do not contain vulnerabilities.
+Image scanning services exist to check image content and compare with known vulnerability databases.
+Once detected you can determine what images in the repository and potentially deployed must be replaced with updated versions.
 
 +++
-image layers and vulnerabilities
+image security and content trust
 
-image scanning
-
-+++
-image security
-
-+++
-content trust
+Images are cryptographically signed with another server such as <a href="https://github.com/docker/notary" target="_blank">Notary</a>.
+This server is then communicated with when pulling the image to confirm that the image content has not changed and is still trusted based on key sets (organization, repository and temporal).
 
 ---
 ## links
