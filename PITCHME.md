@@ -245,7 +245,7 @@ content trust
 ---
 ## links
 
-* [Docker For Everyone](https://github.com/dougtoppin/presentations/blob/master/novalug-dockerforeveryone.pdf)
-* [https://www.docker.com/](https://www.docker.com/)
-* [https://hub.docker.com/](https://hub.docker.com/)
-* [https://github.com/moby/moby](https://github.com/moby/moby)
+* <a href="https://github.com/dougtoppin/presentations/blob/master/novalug-dockerforeveryone.pdf" target="_blank">Docker For Everyone</a>
+* <a href="https://www.docker.com/" target="_blank">https://www.docker.com/</a>
+* <a href="https://hub.docker.com/" target="_blank">https://hub.docker.com/</a>
+* <a href="https://github.com/moby/moby" target="_blank">https://github.com/moby/moby</a>
