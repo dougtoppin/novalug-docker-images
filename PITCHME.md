@@ -12,6 +12,7 @@ View this using [GitPitch](https://gitpitch.com/dougtoppin/novalug-docker-images
 * Commands you need to use
 * What are Docker images?
 * Where can I find and store images?
+* Links
 
 ---
 
@@ -45,6 +46,8 @@ To build your own docker try this from the Moby project [https://mobyproject.org
 +++
 
 Docker is tbd
+
+"sandbox applications on a secure Linux environment"
 
 +++
 
@@ -114,6 +117,9 @@ Maintenance
 
 let's talk about images
 
+"binary blobs"
+
+
 +++
 
 let's talk a little more about images
@@ -142,6 +148,15 @@ There are several ways to create images
 * commit a running container
 
 +++
+
+### tags
+
+* versions
+* latest
+* customized
+
++++
+
 
 Build an image with a tag using a Dockerfile
 
@@ -185,22 +200,45 @@ dockerize it like this
 ---
 ## Where can I find and store images?
 
-+++
-store.docker.com (aka dockerhub)
+* registries - metadata (labels/tags/info) and pointers to repositories
+* repositories - physical storage
+
 
 +++
-my own repository
+### store.docker.com (aka dockerhub)
 
 +++
-AWS ECR
+
+### RH container catalog
 
 +++
-files using export and import using archives
+
+### AWS ECR
++++
+
+### DTR
+
+
++++
+### files using export and import using archives
 
 * docker image save
 * docker image import
 * docker container commit
 
++++
+push an image somewhere
+
++++
+image layers and vulnerabilities
+
+image scanning
+
++++
+image security
+
++++
+content trust
 
 ---
 ## links
