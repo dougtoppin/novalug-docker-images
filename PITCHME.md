@@ -2,7 +2,6 @@
 ##### <span style="font-family:Helvetica Neue; font-weight:bold"><span style="color:#e49436">NovaLUG, 13-May-2017</span>
 <span style="color:#e49436">dougtoppin@gmail.com</span>
 
-View this using [GitPitch](https://gitpitch.com/dougtoppin/novalug-docker-images)
 ---
 
 ## Agenda
@@ -26,6 +25,9 @@ Docker can be used to create customized images that match your needs or to distr
 If Docker is installed on your machine you can try this in real time
 
 I am running Version 17.05.0-ce-mac9
+
++++
+### Where do I get docker?
 
 +++
 
@@ -72,7 +74,7 @@ The bigger picture
 Tell me something
 
 * docker help - more than 50 subcommands
-* docker version - who am i
+* docker version - what am i running and talking to
 * docker info - describe my environment
 
 +++
@@ -179,9 +181,6 @@ docker run -it --rm --name=test1 alpine sh
 docker container commit test1 dougtoppin/test1
 ```
 
-+++
-
-
 ---
 
 ## Dockerize an application
@@ -205,7 +204,10 @@ dockerize it like this
 
 
 +++
-### store.docker.com (aka dockerhub)
+
+### dockerhub
+
+store.docker.com
 
 +++
 
