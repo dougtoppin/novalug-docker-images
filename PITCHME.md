@@ -137,9 +137,12 @@ Key commands in them
 * COPY - copy from host filesystem into image filesystem
 * ADD - more functional copy from host filesystem into image filesystem
 * WORKDIR
-* ENTRYPOINT
++++
+Key commands (cont)
+ 
+* ENTRYPOINT - run this command in the image when the container starts
 * CMD - default arguments for ENTRYPOINT
-* ENV
+* ENV - set environment variables
 * EXPOSE - this image needs these ports
 * LABEL - add metadata to the image being built
 +++
@@ -148,7 +151,19 @@ example of a Dockerfile
 
 ```
 FROM alpine
-RUN something
+LABEL maintainer "dougtoppin@gmail.com"
+LABEL org.label-schema.vcs-url="https://github.com/dougtoppin/lenticular"
+LABEL org.label-schema.description="Tool for creating lenticular images by combining two images"
+
+COPY ./lenticulate.pl /tmp
+
+WORKDIR /tmp
+
+RUN [ "apk", "update" ]
+RUN [ "apk", "add", "perl" ]
+RUN [ "apk", "add", "perl-gd" ]
+
+ENTRYPOINT [ "/tmp/lenticulate.pl" ]
 
 ```
 +++
