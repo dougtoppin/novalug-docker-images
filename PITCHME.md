@@ -24,7 +24,7 @@ docker can be used to create customized images that match your needs or to distr
 
 If docker is installed on your machine you can try this in real time
 
-I am running Version 17.05.0-ce-mac9
+I am running Version 17.05.0-ce-mac11 (edge)
 
 +++
 ### Where do I get docker?
@@ -145,6 +145,16 @@ Key commands (cont)
 * ENV - set environment variables
 * EXPOSE - this image needs these ports
 * LABEL - add metadata to the image being built
+
++++
+Note
+
+just because you see FROM ubuntu/centos/alpine it does not mean that that operating system is in the image, Instead it means that files contained that distribution build will be included in the image being built
+
++++
+Note
+
+EXPOSE just includes required port information to be included in the image metadata, when running a container from that image `-P` can be used to tell the engine to map this port to a host port instead of you knowing which port(s) are required in the run command
 +++
 
 example of a Dockerfile
@@ -220,16 +230,17 @@ docker container commit test1 dougtoppin/test1
 ## dockerize an application
 
 +++
-existing code
+<a href="https://github.com/dougtoppin/lenticular?tab=description" target="_blank">Lenticular perl script</a>
 
-```
-something goes here
-something else goes here
-```
 
 +++
-dockerize it like this
+dockerize it by answering the following questions
 
+* what base image does it need?
+* where is the script to include?
+* what needs to be added for that script to work?
+* how do you want to run it when the container starts?
+* what arguments are needed in the run command?
 ---
 ## Where can I find and store images?
 
