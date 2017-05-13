@@ -47,6 +47,8 @@ To build your own docker try this from the Moby project [https://mobyproject.org
 
 +++
 
+"Operating-system-level virtualization is a computer virtualization method in which the kernel of an operating system allows the existence of multiple isolated user-space instances, instead of just one. Such instances, which are sometimes called containers,[1] virtualization engines (VEs) or jails (FreeBSD jail or chroot jail), may look like real computers from the point of view of programs running in them."
+
 "sandbox applications on a secure Linux environment"
 
 ---
@@ -115,15 +117,31 @@ let's talk about images
 
 "binary blobs"
 
-
-+++
-
-let's talk a little more about images
+"An image is an inert, immutable, file that's essentially a snapshot of a container. Images are created with the build command, and they'll produce a container when started with run. Images are stored in a Docker registry such as registry.hub.docker.com. Because they can become quite large, images are designed to be composed of layers of other images, allowing a miminal amount of data to be sent when transferring images over the network."
 
 ---
 
 Dockerfiles
 
+"A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image.
+Using docker build users can create an automated build that executes several command-line instructions in succession."
+
+<a href="https://docs.docker.com/engine/reference/builder/" target="_blank">Dockerfile reference</a>
+
+<a href="https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/" target="_blank">Dockerfile best practices</a>
++++
+
+Key commands in them
+* FROM - start with this (might be `scratch`)
+* RUN - run this in a new layer on top of current layer
+* COPY - copy from host filesystem into image filesystem
+* ADD - more functional copy from host filesystem into image filesystem
+* WORKDIR
+* ENTRYPOINT
+* CMD - default arguments for ENTRYPOINT
+* ENV
+* EXPOSE - this image needs these ports
+* LABEL - add metadata to the image being built
 +++
 
 example of a Dockerfile
@@ -133,7 +151,14 @@ FROM alpine
 RUN something
 
 ```
++++
+Review of how existing images were made
 
+Click through to their Dockerfiles to see the details
+
+* <a href="https://store.docker.com/images/postgres?tab=description" target="_blank">postgres</a>
+* <a href="https://store.docker.com/images/centos?tab=description" target="_blank">centos</a>
+* <a href="https://store.docker.com/images/perl?tab=description" target="_blank">perl</a>
 +++
 
 Creating images
