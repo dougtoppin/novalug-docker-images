@@ -136,7 +136,7 @@ Key commands in them
 * RUN - run this in a new layer on top of current layer
 * COPY - copy from host filesystem into image filesystem
 * ADD - more functional copy from host filesystem into image filesystem
-* WORKDIR
+* WORKDIR - set working directory for the commands that follow
 +++
 Key commands (cont)
  
